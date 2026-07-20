@@ -1,67 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-const form = document.getElementById("registrationForm");
+    const form = document.querySelector("form");
+    const button = document.querySelector("button");
 
-form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function () {
 
-e.preventDefault();
+        button.innerHTML = "Please Wait...";
+        button.disabled = true;
 
-const btn = document.querySelector("button");
+    });
 
-btn.innerHTML = "Please Wait...";
-btn.disabled = true;
 
-setTimeout(function () {
+    // File selection message
 
-alert("✅ Registration Submitted Successfully!\n\nThank you for applying.");
+    const files = document.querySelectorAll("input[type='file']");
 
-form.reset();
+    files.forEach(function(file){
 
-btn.innerHTML = "Submit Registration";
-btn.disabled = false;
+        file.addEventListener("change", function(){
 
-},2000);
+            if(this.files.length > 0){
 
-});
+                alert("📁 File Selected: " + this.files[0].name);
 
-// File Upload Preview
-const files = document.querySelectorAll("input[type='file']");
+            }
 
-files.forEach(function(file){
+        });
 
-file.addEventListener("change",function(){
-
-if(this.files.length>0){
-
-alert("📁 File Selected: " + this.files[0].name);
-
-}
-
-});
-
-});
-
-// Smooth Scroll
-document.querySelectorAll("a").forEach(anchor=>{
-
-anchor.addEventListener("click",function(e){
-
-const target=this.getAttribute("href");
-
-if(target.startsWith("#")){
-
-e.preventDefault();
-
-document.querySelector(target).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-}
-
-});
-
-});
+    });
 
 });
