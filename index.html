@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SHS Online Registration Portal</title>
 
 <link rel="stylesheet" href="style.css">
@@ -23,6 +24,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </header>
 
+
 <section class="hero">
 
 <h2>Online Registration Form</h2>
@@ -33,72 +35,116 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
+
 <div class="container">
 
-<form id="registrationForm">
+
+<form action="https://formsubmit.co/waqar.ali.solangi.20@gmail.com" method="POST">
+
+
+<input type="hidden" name="_subject" value="New SHS Online Registration">
+
+<input type="hidden" name="_captcha" value="false">
+
 
 <h3>Applicant Information</h3>
 
+
 <label>Full Name</label>
-<input type="text" required>
+
+<input type="text" name="Full_Name" required>
+
 
 <label>Father Name</label>
-<input type="text" required>
+
+<input type="text" name="Father_Name" required>
+
 
 <label>CNIC Number</label>
-<input type="text" placeholder="xxxxx-xxxxxxx-x">
+
+<input type="text" name="CNIC_Number" placeholder="xxxxx-xxxxxxx-x">
+
 
 <label>Mobile Number</label>
-<input type="tel">
+
+<input type="tel" name="Mobile_Number">
+
 
 <label>Email</label>
-<input type="email">
+
+<input type="email" name="Email">
+
 
 <label>Qualification</label>
-<input type="text">
+
+<input type="text" name="Qualification">
+
 
 <label>Address</label>
-<textarea rows="3"></textarea>
+
+<textarea name="Address" rows="3"></textarea>
+
 
 <hr>
+
 
 <h3>Upload Documents</h3>
 
+
 <label>Applicant Photo</label>
-<input type="file">
+
+<input type="file" name="Applicant_Photo">
+
 
 <label>CNIC Front</label>
-<input type="file">
+
+<input type="file" name="CNIC_Front">
+
 
 <label>Payment Screenshot</label>
-<input type="file">
 
-<hr>
+<input type="file" name="Payment_Screenshot"><hr>
+
 
 <h3>Payment Information</h3>
 
+
 <div class="payment-box">
+
 
 <i class="fa-solid fa-wallet"></i>
 
+
 <h4>EasyPaisa Payment</h4>
+
 
 <p><strong>Fee:</strong> Rs.200</p>
 
+
 <p><strong>IBAN:</strong></p>
 
-<input
+
+<input 
 type="text"
+name="IBAN"
 value="PK80TMFB0000000039897519"
 readonly>
 
+
 <label>Transaction ID</label>
+
 
 <input
 type="text"
+name="Transaction_ID"
 placeholder="Enter Transaction ID">
 
+
 </div>
+
+
+<br>
+
 
 <button type="submit">
 
@@ -106,11 +152,14 @@ Submit Registration
 
 </button>
 
+
 </form>
+
 
 </div>
 
-<script src="script.js"></script>
+
 
 </body>
+
 </html>
