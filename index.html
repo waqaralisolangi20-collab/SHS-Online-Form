@@ -1,111 +1,56 @@
+<form id="registrationForm"
+      action="https://formsubmit.co/waqar.ali.solangi.20@gmail.com"
+      method="POST">
 
-<!DOCTYPE html>
-<html lang="ur" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سندھ سولر انرجی این جی اوز | NGO Registration & Community Solar Support Portal</title>
-  <meta name="description" content="Private NGO registration and community solar support portal demo.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <div class="brand">
-        <div class="brand-mark">☀</div>
-        <div>
-          <strong>سندھ سولر انرجی این جی اوز</strong>
-          <span>Community Solar Support Portal</span>
-        </div>
-      </div>
-      <a class="nav-btn" href="#registration">آن لائن رجسٹریشن</a>
-    </div>
-  </header>
+  <input type="hidden" name="_subject"
+         value="New SHS Online Registration">
 
-  <main>
-    <section class="hero">
-      <div class="slides">
-        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85')"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=2000&q=85')"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=2000&q=85')"></div>
-      </div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="badge">☀️ کمیونٹی سولر سپورٹ</div>
-        <h1>سندھ سولر انرجی این جی اوز</h1>
-        <h2>این جی او رجسٹریشن اور کمیونٹی سولر سپورٹ پورٹل</h2>
-        <p>اپنی NGO یا کمیونٹی سپورٹ کی درخواست کے لیے بنیادی معلومات جمع کرائیں۔</p>
-        <a class="primary-btn" href="#registration">رجسٹریشن شروع کریں <span>←</span></a>
-      </div>
-      <div class="dots" aria-label="Image slider controls">
-        <button class="dot active" aria-label="Slide 1"></button>
-        <button class="dot" aria-label="Slide 2"></button>
-        <button class="dot" aria-label="Slide 3"></button>
-      </div>
-    </section>
+  <input type="hidden" name="_template" value="table">
 
-    <section class="notice container">
-      <div class="notice-icon">ⓘ</div>
-      <div>
-        <strong>اہم وضاحت</strong>
-        <p>یہ ایک نجی NGO registration/support portal template ہے۔ یہ Government of Sindh کی سرکاری ویب سائٹ نہیں ہے۔ سرکاری اسکیم یا کسی بھی payment سے پہلے متعلقہ سرکاری/ادارے کی آزادانہ تصدیق ضرور کریں۔</p>
-      </div>
-    </section>
+  <input type="hidden" name="_captcha" value="false">
 
-    <section class="features container">
-      <div class="section-heading">
-        <span>ہماری ترجیحات</span>
-        <h2>کمیونٹی کے لیے صاف توانائی</h2>
-      </div>
-      <div class="feature-grid">
-        <article class="feature-card"><div class="icon">☀️</div><h3>Solar Support</h3><p>کمیونٹی سطح پر سولر توانائی کے منصوبوں کے لیے معلوماتی رجسٹریشن۔</p></article>
-        <article class="feature-card"><div class="icon">🤝</div><h3>Community Focus</h3><p>مقامی کمیونٹیز اور NGO initiatives کے لیے منظم معلوماتی درخواست۔</p></article>
-        <article class="feature-card"><div class="icon">🌱</div><h3>Clean Energy</h3><p>صاف اور قابلِ تجدید توانائی کے بارے میں آگاہی اور تعاون۔</p></article>
-      </div>
-    </section>
+  <div class="form-row">
+    <label>
+      پورا نام
+      <input type="text" name="Full Name" required>
+    </label>
 
-    <section id="registration" class="form-section">
-      <div class="container form-wrap">
-        <div class="form-intro">
-          <span>ONLINE REGISTRATION</span>
-          <h2>اپنی معلومات جمع کریں</h2>
-          <p>براہِ کرم صرف وہی معلومات درج کریں جو اس درخواست کے مقصد کے لیے ضروری ہوں۔ حساس شناختی دستاویزات یا payment معلومات صرف verified official channel پر دیں۔</p>
-          <div class="steps">
-            <div><b>01</b><span>Basic Information</span></div>
-            <div><b>02</b><span>Community Details</span></div>
-            <div><b>03</b><span>Submit Request</span></div>
-          </div>
-        </div>
+    <label>
+      موبائل نمبر
+      <input type="tel" name="Mobile Number" required>
+    </label>
+  </div>
 
-        <form id="registrationForm" class="form-card">
-          <div class="form-row">
-            <label>پورا نام <input required name="name" type="text" placeholder="اپنا نام درج کریں"></label>
-            <label>موبائل نمبر <input required name="phone" type="tel" placeholder="03XXXXXXXXX"></label>
-          </div>
-          <div class="form-row">
-            <label>ضلع <input required name="district" type="text" placeholder="ضلع"></label>
-            <label>تعلقہ / شہر <input required name="city" type="text" placeholder="تعلقہ یا شہر"></label>
-          </div>
-          <label>کمیونٹی / NGO کی تفصیل <textarea required name="details" rows="5" placeholder="اپنی درخواست یا کمیونٹی کی مختصر تفصیل لکھیں"></textarea></label>
-          <label class="check"><input required type="checkbox"> میں تصدیق کرتا/کرتی ہوں کہ یہ ایک نجی registration/support portal ہے اور معلومات جمع کرانے سے پہلے میں اس کی شناخت اور مقصد کو سمجھتا/سمجھتی ہوں۔</label>
-          <button class="primary-btn full" type="submit">درخواست جمع کریں <span>←</span></button>
-          <p id="formMessage" class="form-message" role="status"></p>
-        </form action="https://formsubmit.co/Waqar.ali.solangi.20@gmail.com" method="POST"><input type="hidden" name="_subject" value="New SHS Online Form Application">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-      </div>
-    </section>
-  </main>
+  <div class="form-row">
+    <label>
+      ضلع
+      <input type="text" name="District" required>
+    </label>
 
-  <footer>
-    <div class="container footer-inner">
-      <div><strong>سندھ سولر انرجی این جی اوز</strong><p>NGO Registration & Community Solar Support Portal</p></div>
-      <p>© 2026 Private Portal Template</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+    <label>
+      تعلقہ / شہر
+      <input type="text" name="Tehsil or City" required>
+    </label>
+  </div>
+
+  <label>
+    کمیونٹی / NGO کی تفصیل
+    <textarea name="Community or NGO Details"
+              rows="5"
+              required></textarea>
+  </label>
+
+  <label class="check">
+    <input type="checkbox" required>
+    <span>
+      میں تصدیق کرتا/کرتی ہوں کہ یہ ایک نجی registration/support portal ہے۔
+    </span>
+  </label>
+
+  <button type="submit" class="primary-btn full">
+    درخواست جمع کریں ←
+  </button>
+
+  <div id="formMessage" class="form-message"></div>
+
+</form>
