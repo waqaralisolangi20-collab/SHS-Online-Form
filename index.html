@@ -1,56 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SHS Online Registration</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#eef3f9;
+display:flex;
+justify-content:center;
+padding:25px;
+}
+
+.container{
+width:100%;
+max-width:700px;
+background:#fff;
+padding:25px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+h1{
+text-align:center;
+color:#0d6efd;
+margin-bottom:5px;
+}
+
+p{
+text-align:center;
+color:#666;
+margin-bottom:20px;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-weight:600;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:12px;
+margin-top:6px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border-color:#0d6efd;
+}
+
+.payment-box{
+margin-top:20px;
+padding:15px;
+background:#f8fbff;
+border-radius:10px;
+border:1px solid #d9e8ff;
+text-align:center;
+}
+
+.payment-box h3{
+color:#0d6efd;
+margin-bottom:10px;
+}
+
+.iban{
+font-size:18px;
+font-weight:bold;
+word-break:break-all;
+color:#198754;
+}
+
+button{
+margin-top:25px;
+width:100%;
+padding:14px;
+background:#0d6efd;
+color:#fff;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:#0b5ed7;
+}
+
+.footer{
+margin-top:20px;
+text-align:center;
+font-size:13px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>SHS Online Registration</h1>
+
+<p>Please fill all required information correctly.</p>
+
 <form id="registrationForm"
-      action="https://formsubmit.co/waqar.ali.solangi.20@gmail.com"
-      method="POST">
+action="https://formsubmit.co/waqar.ali.solangi.20@gmail.com"
+method="POST"
+enctype="multipart/form-data">
 
-  <input type="hidden" name="_subject"
-         value="New SHS Online Registration">
+<input type="hidden" name="_captcha" value="false">
 
-  <input type="hidden" name="_template" value="table">
+<input type="hidden" name="_template" value="table">
 
-  <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New SHS Registration">
 
-  <div class="form-row">
-    <label>
-      پورا نام
-      <input type="text" name="Full Name" required>
-    </label>
+<label>Full Name</label>
+<input
+type="text"
+name="Full Name"
+required>
 
-    <label>
-      موبائل نمبر
-      <input type="tel" name="Mobile Number" required>
-    </label>
-  </div>
+<label>Father Name</label>
+<input
+type="text"
+name="Father Name"
+required>
 
-  <div class="form-row">
-    <label>
-      ضلع
-      <input type="text" name="District" required>
-    </label>
+<label>CNIC</label>
+<input
+type="text"
+name="CNIC"
+required>
 
-    <label>
-      تعلقہ / شہر
-      <input type="text" name="Tehsil or City" required>
-    </label>
-  </div>
+<label>Mobile Number</label>
+<input
+type="tel"
+name="Mobile Number"
+required><label>Email Address</label>
+<input
+type="email"
+name="Email">
 
-  <label>
-    کمیونٹی / NGO کی تفصیل
-    <textarea name="Community or NGO Details"
-              rows="5"
-              required></textarea>
-  </label>
+<label>Date of Birth</label>
+<input
+type="date"
+name="Date of Birth"
+required>
 
-  <label class="check">
-    <input type="checkbox" required>
-    <span>
-      میں تصدیق کرتا/کرتی ہوں کہ یہ ایک نجی registration/support portal ہے۔
-    </span>
-  </label>
+<label>Gender</label>
+<select
+name="Gender"
+required>
 
-  <button type="submit" class="primary-btn full">
-    درخواست جمع کریں ←
-  </button>
+<option value="">Select Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
 
-  <div id="formMessage" class="form-message"></div>
+</select>
+
+<label>Province</label>
+<select
+name="Province"
+required>
+
+<option value="">Select Province</option>
+<option>Sindh</option>
+<option>Punjab</option>
+<option>KPK</option>
+<option>Balochistan</option>
+<option>Gilgit Baltistan</option>
+<option>AJK</option>
+<option>Islamabad</option>
+
+</select>
+
+<label>City</label>
+<input
+type="text"
+name="City"
+required>
+
+<label>Complete Address</label>
+
+<textarea
+name="Address"
+rows="4"
+required></textarea>
+
+<label>Qualification</label>
+
+<input
+type="text"
+name="Qualification"
+required>
+
+<label>Upload Payment Screenshot</label>
+
+<input
+type="file"
+name="Payment Screenshot"
+accept="image/*"
+required>
+
+<div class="payment-box">
+
+<h3>Payment Details</h3>
+
+<p><b>Easypaisa IBAN</b></p>
+
+<div class="iban">
+
+PK80TMFB0000000039897519
+
+</div>
+
+<br>
+
+<p>
+Please complete your payment first and then upload the payment screenshot before submitting the application.
+</p>
+
+</div>
+
+<button
+type="submit"
+id="submitBtn">
+
+Submit Application
+
+</button>
+
+<div class="footer">
+
+© 2026 SHS Online Registration
+
+</div>
 
 </form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
