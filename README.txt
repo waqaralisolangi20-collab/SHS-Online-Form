@@ -1,1 +1,0 @@
-Upload to Netlify/GitHub Pages. FormSubmit requires email activation.
