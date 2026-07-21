@@ -1,32 +1,20 @@
-document.addEventListener("DOMContentLoaded", function () {
+const slides = [...document.querySelectorAll('.slide')];
+const dots = [...document.querySelectorAll('.dot')];
+let current = 0;
+let timer;
 
-    const form = document.querySelector("form");
-    const button = document.querySelector("button");
+function showSlide(index){
+  current = (index + slides.length) % slides.length;
+  slides.forEach((s,i)=>s.classList.toggle('active',i===current));
+  dots.forEach((d,i)=>d.classList.toggle('active',i===current));
+}
+function startSlider(){ timer = setInterval(()=>showSlide(current+1), 5000); }
+dots.forEach((dot,i)=>dot.addEventListener('click',()=>{clearInterval(timer);showSlide(i);startSlider();}));
+startSlider();
 
-    form.addEventListener("submit", function () {
-
-        button.innerHTML = "Please Wait...";
-        button.disabled = true;
-
-    });
-
-
-    // File selection message
-
-    const files = document.querySelectorAll("input[type='file']");
-
-    files.forEach(function(file){
-
-        file.addEventListener("change", function(){
-
-            if(this.files.length > 0){
-
-                alert("📁 File Selected: " + this.files[0].name);
-
-            }
-
-        });
-
-    });
-
+document.getElementById('registrationForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const msg = document.getElementById('formMessage');
+  msg.textContent = 'آپ کی درخواست demo mode میں تیار ہو گئی ہے۔ اصل submission کے لیے verified backend/email service کو securely configure کریں۔';
+  this.reset();
 });
